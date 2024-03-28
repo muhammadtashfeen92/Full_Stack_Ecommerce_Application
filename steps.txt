@@ -1,0 +1,11 @@
+1. Initializes a New Rails Project.
+2. Install Devise And Set it Up.
+3. Install Font Awesome.
+4. Created First Controller and View.
+5. (Some Tailwind Classes are Not Working - rake tailwindcss:build is what solved it for me.)
+6. Use rake tailwindcss:what to solve tailwind Updatind Issue.
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------
+Issues :-
+1. Deleting Iamges From the Product.
