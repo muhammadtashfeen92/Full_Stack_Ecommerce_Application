@@ -9,3 +9,4 @@
 --------------------------------------------------------------------------------------------------------------------------------
 Issues :-
 1. Deleting Iamges From the Product.
+2. Size Array Must be Added intho the product Size to select the appropriate Product Size i.e [small, medium, large].

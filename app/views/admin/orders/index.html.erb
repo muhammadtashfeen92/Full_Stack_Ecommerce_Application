@@ -3,8 +3,8 @@
     <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
   <% end %>
   <div class="flex justify-between items-center">
-    <h1 class="font-bold text-4xl">Products</h1>
-    <%= link_to "New product", new_admin_product_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
+    <h1 class="font-bold text-4xl">Orders</h1>
+    <%= link_to "New order", new_admin_order_path, class: "rounded-lg py-3 px-5 bg-blue-600 text-white block font-medium" %>
   </div>
   <div class="flex flex-col w-full">
     <div class="overlow-x-auto sm:mx-0.5 lg:mx-0.5">
@@ -14,33 +14,33 @@
             <thead class="bg-white border-b">
               <tr>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
+                  Order ID
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                  Name
+                  Customer Email
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                  Description 
+                  Address
                 </th>
                 <th scope="col" class="text-sm font-medium text-gray-800 px-6 py-4 text-left">
-                  Price 
+                  Total Price
                 </th>
               </tr>
             </thead>
             <tbody>
-              <% @admin_products.each do |p| %>
+              <% @admin_orders.each do |o| %>
                 <tr class="bg-gray-50 border-b">
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= p.images.any? ? image_tag(p.images.first.variant(:thumb)) : image_tag("https://via.placeholder.com/50") %>
-                  </td>
-                  <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800 underline">
-                    <%= link_to p.name, [:admin, p] %>
-                    <%#= link_to p.name, edit_admin_product_path(p) %>
+                    <%= link_to o.id, [:admin, o] %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    <%= p.description %>
+                    <%= o.customer_email %>
                   </td>
                   <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
-                    $<%= (p.price/100.0).to_s %>
+                    <%= o.address %>
+                  </td>
+                  <td class="px-6 py-4 whitepsace-nowrap tex-sm font-medium text-gray-800">
+                    <%= o.total %>
                   </td>
                 </tr>
               <% end %>
